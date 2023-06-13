@@ -9,7 +9,7 @@ int num = Convert.ToInt32(Console.ReadLine());
 
 
 
-//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+/*//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 System.Console.WriteLine("введите число");
 int num = Convert.ToInt32(Console.ReadLine());
 string text = Convert.ToString(num);
@@ -21,3 +21,22 @@ else
 {
     Console.WriteLine("третьей цифры нет");
 }
+*/
+
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+System.Console.WriteLine("введите цифру обозначающую день недели");
+int day = Convert.ToInt32(Console.ReadLine());
+
+
+void dayOfTheWeek (int day){
+
+if (day < 1 || day > 7)
+{
+    Console.Write("нет такого дня недели");
+}
+else if (day == 6 || day == 7){
+    Console.WriteLine("выходной");
+}
+else Console.WriteLine("рабочий");}
+
+dayOfTheWeek(day);
