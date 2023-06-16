@@ -25,7 +25,7 @@ else
 //Задача 21
 //Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 
-int x1 = Coordinate("x", "A");
+/*int x1 = Coordinate("x", "A");
 int y1 = Coordinate("y", "A");
 int z1 = Coordinate("z", "A");
 int x2 = Coordinate("x", "B");
@@ -49,3 +49,35 @@ double Decision(double x1, double x2,
 double sLength =  Math.Round (Decision(x1, x2, y1, y2, z1, z2), 2 );
 
 Console.WriteLine($"Длина отрезка  {sLength}");
+*/
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+Console.WriteLine("Input your number ");
+int user_number = Convert.ToInt32(Console.ReadLine());
+void SqurePrinter(int numN)
+{   if (user_number > 0)
+    {
+    int current = 1;
+    while (current <= numN)
+    {
+        double res = Math.Pow(current,3);
+        Console.Write($"{res:f0}, ");
+        current++;
+    }
+    Console.WriteLine("\b\b.");
+    }
+    else
+    {
+        int current = 1;
+    while (current >= numN)
+    {
+        double res = Math.Pow(current,3);
+        Console.Write($"{res:f0}, ");
+        current--;
+    }
+    Console.WriteLine("\b\b.");
+    }
+}
+
+SqurePrinter(user_number);
