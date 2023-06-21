@@ -19,16 +19,18 @@ Console.WriteLine($"получается {exponential}");
 
 //Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
-Console.WriteLine("Введите число ");
+/*Console.WriteLine("Введите число ");
 int userNum = Convert.ToInt32(Console.ReadLine());
 
-  int SumNumber(int userNum){
+  int SumNumber(int userNum)
+  {
     
     int count = Convert.ToString(userNum).Length;
     int advance = 0;
     int result = 0;
 
-    for (int i = 0; i <= count; i++){
+    for (int i = 0; i <= count; i++)
+    {
       advance = userNum - userNum % 10;
       result = result + (userNum - advance);
       userNum = userNum / 10;
@@ -38,4 +40,28 @@ int userNum = Convert.ToInt32(Console.ReadLine());
 
 int sumNumbers = SumNumber(userNum);
 Console.WriteLine($"Сумма цифр {sumNumbers}");
+*/
+
+// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран
+
+int [] newArray (int size_array)
+{
+    int [] randomArray = new int [size_array];
+    for (int i = 0; i < size_array; i++)
+    {
+        randomArray[i] = new Random().Next(-999999999, 999999999);
+    }
+    return randomArray;
+}
+void printArray (int [] array_to_print)
+{
+    Console.WriteLine("Ваш массив: ");
+    for (int i = 0; i < array_to_print.Length; i++)
+        Console.Write(array_to_print[i] + " ");
+}
+
+int size = 8;
+int [] firstArray = newArray(size);
+printArray(firstArray);
+
 
