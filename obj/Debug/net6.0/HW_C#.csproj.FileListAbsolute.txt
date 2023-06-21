@@ -1,0 +1,15 @@
+C:\Users\ROG\Desktop\HW_C#\bin\Debug\net6.0\HW_C#.exe
+C:\Users\ROG\Desktop\HW_C#\bin\Debug\net6.0\HW_C#.deps.json
+C:\Users\ROG\Desktop\HW_C#\bin\Debug\net6.0\HW_C#.runtimeconfig.json
+C:\Users\ROG\Desktop\HW_C#\bin\Debug\net6.0\HW_C#.dll
+C:\Users\ROG\Desktop\HW_C#\bin\Debug\net6.0\HW_C#.pdb
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.csproj.AssemblyReference.cache
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.AssemblyInfoInputs.cache
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.AssemblyInfo.cs
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.csproj.CoreCompileInputs.cache
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.dll
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\refint\HW_C#.dll
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.pdb
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\HW_C#.genruntimeconfig.cache
+C:\Users\ROG\Desktop\HW_C#\obj\Debug\net6.0\ref\HW_C#.dll
