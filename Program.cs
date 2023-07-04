@@ -1,37 +1,42 @@
-﻿// Задача 56: Задайте прямоугольный двумерный массив. 
-//Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+﻿// Задача 58: Задайте две матрицы. 
+//Напишите программу, которая будет находить произведение двух матриц.
 
-int rows = InputNumbers("Введите количество строк: ");
-int callons = InputNumbers("Введите колличество столбцов: ");
-int range = InputNumbers("Введите диапазон: от 1 до ");
+int rows = InputNumbers("Введите число строк 1-й матрицы: ");
+int columns1 = InputNumbers("Введите число столбцов 1-й матрицы : ");
+//столбцы в 1-й матрице = строкам 2-й матрицы
+int columns2 = InputNumbers("Введите число столбцов 2-й матрицы: ");
+int range = InputNumbers("Введите диапазон случайных чисел: от 1 до ");
 
-int[,] array = new int[rows, callons];
-CreateArray(array);
-WriteArray(array);
+int[,] firstMartrix = new int[rows, columns1];
+CreateArray(firstMartrix);
+Console.WriteLine($"\n Первая матрица:");
+WriteArray(firstMartrix);
 
-int minSumLine = 0;
-int sumLine = SumLineElements(array, 0);
-for (int i = 1; i < array.GetLength(0); i++)
+int[,] secomdMartrix = new int[columns1, columns2];
+CreateArray(secomdMartrix);
+Console.WriteLine($"\n Вторая матрица:");
+WriteArray(secomdMartrix);
+
+int[,] resultMatrix = new int[rows,columns2];
+
+MultiplyMatrix(firstMartrix, secomdMartrix, resultMatrix);
+Console.WriteLine($"\n Произведение первой и второй матриц:");
+WriteArray(resultMatrix);
+
+void MultiplyMatrix(int[,] firstMartrix, int[,] secomdMartrix, int[,] resultMatrix)
 {
-  int tempSumLine = SumLineElements(array, i);
-  if (sumLine > tempSumLine)
+  for (int i = 0; i < resultMatrix.GetLength(0); i++)
   {
-    sumLine = tempSumLine;
-    minSumLine = i;
+    for (int j = 0; j < resultMatrix.GetLength(1); j++)
+    {
+      int sum = 0;
+      for (int k = 0; k < firstMartrix.GetLength(1); k++)
+      {
+        sum += firstMartrix[i,k] * secomdMartrix[k,j];
+      }
+      resultMatrix[i,j] = sum;
+    }
   }
-}
-
-Console.WriteLine($"\n{minSumLine+1} - строка где наименьшей сумма чисел ({sumLine}) ");
-
-
-int SumLineElements(int[,] array, int i)
-{
-  int sumLine = array[i,0];
-  for (int j = 1; j < array.GetLength(1); j++)
-  {
-    sumLine += array[i,j];
-  }
-  return sumLine;
 }
 
 int InputNumbers(string input)
